@@ -1,0 +1,196 @@
+.blockOcode {
+    margin: 0 auto !important;
+}
+
+.blockOcode .contain {
+    line-height: 1.75;
+}
+
+.blockOcode .contain h1 {
+    line-height: initial;
+}
+
+.blockOcode .contain h2,
+.blockOcode .contain h3,
+.blockOcode .contain h4,
+.blockOcode .contain h5 {
+    margin: 3rem 0 1.38rem;
+    padding: 0;
+    font-weight: 600;
+    line-height: 1.3;
+}
+
+.blockOcode .contain h2 {
+    font-size: 2.441rem;
+}
+
+.blockOcode .contain h3 {
+    font-size: 1.953rem;
+}
+
+.blockOcode .contain h4 {
+    font-size: 1.563rem;
+}
+
+.blockOcode .contain h5 {
+    font-size: 1.25rem;
+    text-align: left;
+}
+
+.blockOcode .contain section>div>h2:first-child {
+    margin-top: 0;
+}
+
+.blockOcode h2.accented:after {
+    top: 0;
+}
+
+.blockOcode .contain section>div>h2.accented {
+    margin-top: 1.953rem;
+}
+
+.blockOcode p,
+.blockOcode ul,
+.blockOcode ol {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+}
+
+.blockOcode p.text_small {
+    font-size: 0.8rem;
+}
+
+.blockOcode ul {
+    list-style-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' height='0.9em' viewBox='0 -64 512 512'%3E%3Cpath d='M502.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-128-128c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L402.7 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l370.7 0-73.4 73.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l128-128z'/%3E%3C/svg%3E");
+}
+
+.blockOcode .hero-text p {
+    font-size: 1.125rem;
+    margin-bottom: 6px;
+}
+
+.blockOcode .uwa-hero {
+    margin-bottom: 2rem;
+}
+
+.blockOcode .uwa-hero.small {
+    height: 200px;
+}
+
+.blockOcode .section {
+    margin-top: 3rem;
+}
+
+.blockOcode .breadcrumbs {
+    padding: 0;
+    margin-bottom: 2rem;
+    line-height: initial;
+}
+
+.blockOcode .featureditems {
+    margin-bottom: 2rem;
+}
+
+.blockOcode #indexForm {
+    width: 100%;
+    margin-top: 0;
+    margin-bottom: calc(3rem + 10px);
+}
+
+.blockOcode .uwa-links {
+    justify-content: unset;
+}
+
+.blockOcode .text-box h2 {
+    margin: 0;
+}
+
+.blockOcode .text-box h4 {
+    margin-top: 0;
+    padding: 0 20px;
+}
+
+.blockOcode .text-box-right {
+    min-width: 50%;
+    padding: 0 20px;
+}
+
+.blockOcode .text-box-right p {
+    margin: 0;
+    margin-left: 24px;
+    margin-bottom: 1rem;
+}
+
+.blockOcode .text-box-right p:last-child,
+.blockOcode .text-box-right ul:last-child,
+.blockOcode .text-box-right ol:last-child {
+    margin-bottom: 0;
+}
+
+.blockOcode .collection-section h2 {
+    margin: 3rem 0;
+}
+
+.blockOcode .img-box img {
+    height: auto;
+}
+
+/* Contact us page */
+body[data-recollect-page="-pages-test-contact"] .blockOcode_block {
+    width: 90%;
+}
+
+body[data-recollect-page="-pages-test-contact"] .blockOcode_block>div {
+    padding: 0 !important;
+}
+
+body[data-recollect-page="-pages-test-contact"] .blockOcode_block input,
+body[data-recollect-page="-pages-test-contact"] .blockOcode_block textarea {
+    font-family: inherit;
+}
+
+body[data-recollect-page="-pages-test-contact"] .blockOcode_block div.submit {
+    text-align: initial;
+}
+
+@media only screen and (max-width: 1150px) {
+    .blockOcode h1 {
+        font-size: 2.074rem;
+    }
+
+    .blockOcode h2 {
+        font-size: 1.728rem;
+    }
+
+    .blockOcode h3 {
+        font-size: 1.44rem;
+    }
+
+    .blockOcode h4 {
+        font-size: 1.2rem;
+    }
+
+    .blockOcode h5 {
+        font-size: 1rem;
+    }
+
+    .blockOcode small,
+    .blockOcode .text_small {
+        font-size: 0.833rem;
+    }
+
+    .blockOcode .hero-text p {
+        font-size: 1rem;
+        margin-bottom: 6px;
+    }
+}
+
+@media only screen and (max-width: 790px) {
+    .blockOcode {
+        padding-bottom: 2em;
+    }
+
+    .blockOcode .uwa-hero {
+        height: auto;
+    }
+}
