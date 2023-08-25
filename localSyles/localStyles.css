@@ -131,6 +131,10 @@
     margin: 3rem 0;
 }
 
+.blockOcode #collectionwidget div.metaCont {
+    line-height: normal;
+}
+
 .blockOcode .img-box img {
     height: auto;
 }
@@ -155,6 +159,12 @@ body[data-recollect-page="-pages-test-contact"] .blockOcode_block textarea {
 
 body[data-recollect-page="-pages-test-contact"] .blockOcode_block div.submit {
     text-align: initial;
+}
+
+@media only screen and (max-width: 1200px) {
+    body[data-recollect-page="-pages-test-contact"] .blockOcode_block {
+        margin-top : 40px;
+    }
 }
 
 @media only screen and (max-width: 1150px) {
