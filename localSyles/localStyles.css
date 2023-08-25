@@ -144,6 +144,10 @@ body[data-recollect-page="-pages-test-contact"] .blockOcode_block>div {
     padding: 0 !important;
 }
 
+body[data-recollect-page="-pages-test-contact"] .blockOcode_block .heading1 {
+    display: none;
+}
+
 body[data-recollect-page="-pages-test-contact"] .blockOcode_block input,
 body[data-recollect-page="-pages-test-contact"] .blockOcode_block textarea {
     font-family: inherit;
