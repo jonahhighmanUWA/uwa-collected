@@ -105,20 +105,18 @@
     margin: 0;
 }
 
+.blockOcode .text-box-right {
+    min-width: 50%;
+}
+
 .blockOcode .text-box h4 {
     margin-top: 0;
     padding: 0 20px;
 }
 
-.blockOcode .text-box-right {
-    min-width: 50%;
-    padding: 0 20px;
-}
-
-.blockOcode .text-box-right p {
-    margin: 0;
-    margin-left: 24px;
-    margin-bottom: 1rem;
+.blockOcode .text-box p {
+    margin: 0 0 1rem;
+    padding-left: 24px;
 }
 
 .blockOcode .text-box-right p:last-child,
@@ -137,6 +135,43 @@
 
 .blockOcode .img-box img {
     height: auto;
+}
+
+/* Browser widget (Item counts) */
+
+#browser {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    gap: 1.5rem;
+}
+
+#browser a {
+    flex: 1 1 150px;
+    background-color: #F4F4F4;
+    color: initial;
+    display: inline-block;
+    position: relative;
+    padding: 1rem;
+    border-radius: 0px;
+    text-decoration: none;
+    transition: background-color 0.1s ease-in-out;
+}
+
+#browser a:hover {
+    background-color: #DAAA00;
+}
+
+#browser a span.b_title {
+    font-size: 16px;
+    font-weight: 400;
+    white-space: nowrap;
+}
+
+#browser a span.b_count {
+    font-size: 26px;
+    font-weight: 400;
+    white-space: nowrap;
 }
 
 /* Contact us page */
@@ -163,39 +198,53 @@ body[data-recollect-page="-pages-test-contact"] .blockOcode_block div.submit {
 
 @media only screen and (max-width: 1200px) {
     body[data-recollect-page="-pages-test-contact"] .blockOcode_block {
-        margin-top : 40px;
+        margin-top: 40px;
     }
 }
 
 @media only screen and (max-width: 1150px) {
     .blockOcode h1 {
-        font-size: 2.074rem;
+        font-size: 2.074rem !important;
     }
 
     .blockOcode h2 {
-        font-size: 1.728rem;
+        font-size: 1.728rem !important;
     }
 
     .blockOcode h3 {
-        font-size: 1.44rem;
+        font-size: 1.44rem !important;
     }
 
     .blockOcode h4 {
-        font-size: 1.2rem;
+        font-size: 1.2rem !important;
     }
 
     .blockOcode h5 {
-        font-size: 1rem;
+        font-size: 1rem !important;
     }
 
     .blockOcode small,
     .blockOcode .text_small {
-        font-size: 0.833rem;
+        font-size: 0.833rem !important;
     }
 
     .blockOcode .hero-text p {
-        font-size: 1rem;
-        margin-bottom: 6px;
+        font-size: 1rem !important;
+        margin-bottom: 6px !important;
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+    .blockOcode .text-box {
+        padding-bottom: 40px;
+    }
+
+    .blockOcode .text-box-left {
+        margin: 20px 20px 1.38rem;
+    }
+
+    .blockOcode .text-box p {
+        padding-left: 20px;
     }
 }
 
@@ -206,5 +255,9 @@ body[data-recollect-page="-pages-test-contact"] .blockOcode_block div.submit {
 
     .blockOcode .uwa-hero {
         height: auto;
+    }
+
+    #browser {
+        flex-direction: column;
     }
 }
