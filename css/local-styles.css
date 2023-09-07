@@ -155,6 +155,7 @@
     position: relative !important;
     padding: 1rem !important;
     margin: 0 !important;
+    border-radius: 0 !important;
     text-decoration: none !important;
     min-width: auto !important;
     min-height: auto !important;
