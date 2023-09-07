@@ -140,7 +140,7 @@
 /* Browser widget (Item counts) */
 
 #browser {
-    display: flex;
+    display: flex !important;
     flex-flow: row wrap;
     justify-content: space-between;
     gap: 25px;
@@ -148,17 +148,22 @@
 }
 
 #browser a {
-    flex: 1 1 150px;
-    background-color: #F4F4F4;
-    color: initial;
-    display: flex;
+
+    background-color: #fff !important;
+    color: initial !important;
+    display: flex !important;
+    position: relative !important;
+    padding: 1rem !important;
+    margin: 0 !important;
+    text-decoration: none !important;
+    min-width: auto !important;
+    min-height: auto !important;
+    height: 150px;
     flex-flow: column-reverse;
     justify-content: flex-end;
-    position: relative;
-    height: 150px;
-    padding: 1rem;
-    border-radius: 0px;
-    text-decoration: none;
+    border: 1px solid #d1d1d1;
+    box-shadow: 0px 4px 0px 0px #d1d1d1;
+    flex: 1 1 20%;
     transition: background-color 0.1s ease-in-out;
     overflow: hidden;
 }
@@ -169,27 +174,44 @@
 }
 
 #browser a:hover {
-    background-color: #f0dd99;
+    background-color: #f0dd99 !important;
 }
 
 #browser a span.b_title {
-    font-size: 1rem;
-    font-weight: 400;
-    white-space: normal;
+    font-size: 1rem !important;
+    font-weight: 400 !important;
+    white-space: normal !important;
+}
+
+#browser a span.b_title:after {
+    display: inline-block;
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-size: 12px;
+    content: '\f054';
+    padding-left: 0.6rem;
 }
 
 #browser a span.b_count {
-    font-size: 2.441rem;
-    font-weight: 600;
-    white-space: nowrap;
+    font-size: 2.441rem !important;
+    font-weight: 600 !important;
+    white-space: nowrap !important;
     margin-bottom: -0.5rem;
 
 }
 
 #browser a:before {
-    color: #e0e0e0;
+    display: inline;
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    color: #d1d1d1;
     position: absolute;
-    font-family: 'FontAwesome';
     bottom: -22px;
     right: -2px;
     font-size: 6rem;
@@ -323,14 +345,17 @@
 
 #browser .nodetype0>.b_title {
     visibility: hidden;
-    font-size: 0;
+    font-size: 0 !important;
 }
 
-#browser .nodetype0>.b_title:after {
+#browser .nodetype0>.b_title:before {
     content: 'Total items';
     visibility: visible;
     font-size: 1rem;
+}
 
+#browser .nodetype0>.b_title:after {
+    visibility: visible;
 }
 
 /* Contact us page */
@@ -421,11 +446,23 @@ body[data-recollect-page="-pages-test-contact"] .blockOcode_block div.submit {
     }
 
     #browser a {
-        flex-basis: auto;
-        height: auto;
+        flex-flow: row-reverse;
+        flex-basis: 48px;
+        align-items: flex-end;
     }
 
     #browser a:before {
-        bottom: -20px !important;
+        bottom: -8px !important;
+        right: -4px;
+        font-size: 4.5rem;
+    }
+
+    #browser a span.b_count:after {
+        content: '\a0';
+    }
+
+    #browser a span.b_title {
+        max-width: 50%;
+        margin-bottom: -2px;
     }
 }
