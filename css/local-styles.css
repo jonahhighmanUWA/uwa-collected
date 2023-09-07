@@ -143,7 +143,7 @@
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between;
-    gap: 1.5rem;
+    gap: 1rem;
 }
 
 #browser a {
@@ -152,27 +152,174 @@
     color: initial;
     display: inline-block;
     position: relative;
+    height: 100px;
     padding: 1rem;
     border-radius: 0px;
     text-decoration: none;
     transition: background-color 0.1s ease-in-out;
+    overflow: hidden;
+}
+
+#browser a>* {
+    position: relative;
+    z-index: 2;
 }
 
 #browser a:hover {
-    background-color: #DAAA00;
+    background-color: #f0dd99;
 }
 
 #browser a span.b_title {
-    font-size: 16px;
+    font-size: 1rem;
+    font-weight: 400;
+    white-space: normal;
+}
+
+#browser a span.b_count {
+    font-size: 1.953rem;
     font-weight: 400;
     white-space: nowrap;
 }
 
-#browser a span.b_count {
-    font-size: 26px;
-    font-weight: 400;
-    white-space: nowrap;
+#browser a:before {
+    color: lightgrey;
+    position: absolute;
+    font-family: 'FontAwesome';
+    top: 0px;
+    right: -10px;
+    font-size: 7rem;
+    transition: color 0.1s ease-in-out;
 }
+
+#browser a:hover:before {
+    color: #DAAA00;
+}
+
+/* Artwork icon */
+#browser .nodetype8:before {
+    content: "\f1fc";
+    top: -10px;
+}
+
+/* Audio icon */
+#browser .nodetype3:before {
+    content: "\f025";
+}
+
+/* Collection icon */
+#browser .nodetype7:before {
+    content: "\f187";
+}
+
+/* Contributor icon */
+#browser .nodetype6:before {
+    content: "\f2be";
+    top: 0px;
+}
+
+/* Document icon */
+#browser .nodetype4:before {
+    content: "\f0f6";
+}
+/* Ephemera icon */
+#browser .nodetype10:before {
+    content: "\f0c6";
+    top: 5px;
+}
+
+/* Event icon */
+#browser .nodetype17:before {
+    content: "\f133";
+}
+
+/* Exhibition icon */
+#browser .nodetype18:before {
+    content: "\f145";
+}
+
+/* Map icon */
+#browser .nodetype12:before {
+    /* content: "\f0ac"; */
+    content: "\f278";
+    top: 5px;
+}
+/* Object icon */
+#browser .nodetype11:before {
+    content: "\f1b2";
+}
+
+/* Oral history icon */
+#browser .nodetype20:before {
+    /* content: "\f10e"; */
+    content: "\f0e6";
+    top: -12px;
+}
+
+/* Organisation icon */
+#browser .nodetype19:before {
+    /* content: "\f0f7"; */
+    content: "\f19c";
+    top: 5px;
+}
+
+/* People icon */
+#browser .nodetype23:before {
+    content: "\f0c0";
+}
+
+/* Photograph icon */
+#browser .nodetype13:before {
+    content: "\f03e";
+    top: 10px;
+}
+
+/* Place icon */
+#browser .nodetype22:before {
+    content: "\f041";
+    right: 16px;
+    top: -12px;
+}
+/* Plan and technical drawing icon */
+#browser .nodetype14:before {
+    content: "\f044";
+    top: 5px;
+}
+/* Score icon */
+#browser .nodetype15:before {
+    content: "\f001";
+    right: 16px;
+    top: -12px;
+}
+
+/* Serial icon */
+#browser .nodetype24:before {
+    content: "\f1ea";
+    top: 5px;
+}
+
+/* Timeline icon */
+#browser .nodetype21:before {
+    content: "\f017";
+}
+
+/* Video icon */
+#browser .nodetype16:before {
+    content: "\f03d";
+    /* content: "\f008"; */
+    top: 10px;
+    right: 10px;
+}
+
+/* Show all icon */
+#browser .nodetype0:before {
+    content: "\f16b";
+}
+
+
+
+/* #browser a.nodetype0 {
+    display: none;
+} */
 
 /* Contact us page */
 body[data-recollect-page="-pages-test-contact"] .blockOcode_block {
