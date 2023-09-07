@@ -143,16 +143,19 @@
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between;
-    gap: 1rem;
+    gap: 25px;
+    line-height: normal;
 }
 
 #browser a {
     flex: 1 1 150px;
     background-color: #F4F4F4;
     color: initial;
-    display: inline-block;
+    display: flex;
+    flex-flow: column-reverse;
+    justify-content: flex-end;
     position: relative;
-    height: 100px;
+    height: 150px;
     padding: 1rem;
     border-radius: 0px;
     text-decoration: none;
@@ -176,18 +179,20 @@
 }
 
 #browser a span.b_count {
-    font-size: 1.953rem;
-    font-weight: 400;
+    font-size: 2.441rem;
+    font-weight: 600;
     white-space: nowrap;
+    margin-bottom: -0.5rem;
+
 }
 
 #browser a:before {
-    color: lightgrey;
+    color: #e0e0e0;
     position: absolute;
     font-family: 'FontAwesome';
-    top: 0px;
-    right: -10px;
-    font-size: 7rem;
+    bottom: -22px;
+    right: -2px;
+    font-size: 6rem;
     transition: color 0.1s ease-in-out;
 }
 
@@ -198,7 +203,8 @@
 /* Artwork icon */
 #browser .nodetype8:before {
     content: "\f1fc";
-    top: -10px;
+    bottom: -12px;
+
 }
 
 /* Audio icon */
@@ -214,17 +220,16 @@
 /* Contributor icon */
 #browser .nodetype6:before {
     content: "\f2be";
-    top: 0px;
 }
 
 /* Document icon */
 #browser .nodetype4:before {
     content: "\f0f6";
 }
+
 /* Ephemera icon */
 #browser .nodetype10:before {
     content: "\f0c6";
-    top: 5px;
 }
 
 /* Event icon */
@@ -241,8 +246,8 @@
 #browser .nodetype12:before {
     /* content: "\f0ac"; */
     content: "\f278";
-    top: 5px;
 }
+
 /* Object icon */
 #browser .nodetype11:before {
     content: "\f1b2";
@@ -252,14 +257,13 @@
 #browser .nodetype20:before {
     /* content: "\f10e"; */
     content: "\f0e6";
-    top: -12px;
+    bottom: -8px;
 }
 
 /* Organisation icon */
 #browser .nodetype19:before {
     /* content: "\f0f7"; */
     content: "\f19c";
-    top: 5px;
 }
 
 /* People icon */
@@ -270,31 +274,30 @@
 /* Photograph icon */
 #browser .nodetype13:before {
     content: "\f03e";
-    top: 10px;
 }
 
 /* Place icon */
 #browser .nodetype22:before {
     content: "\f041";
     right: 16px;
-    top: -12px;
+    bottom: -10px
 }
+
 /* Plan and technical drawing icon */
 #browser .nodetype14:before {
     content: "\f044";
-    top: 5px;
 }
+
 /* Score icon */
 #browser .nodetype15:before {
     content: "\f001";
     right: 16px;
-    top: -12px;
+    bottom: -8px;
 }
 
 /* Serial icon */
 #browser .nodetype24:before {
     content: "\f1ea";
-    top: 5px;
 }
 
 /* Timeline icon */
@@ -306,7 +309,6 @@
 #browser .nodetype16:before {
     content: "\f03d";
     /* content: "\f008"; */
-    top: 10px;
     right: 10px;
 }
 
@@ -315,11 +317,21 @@
     content: "\f16b";
 }
 
-
-
-/* #browser a.nodetype0 {
+/* #browser .nodetype0 {
     display: none;
 } */
+
+#browser .nodetype0>.b_title {
+    visibility: hidden;
+    font-size: 0;
+}
+
+#browser .nodetype0>.b_title:after {
+    content: 'Total items';
+    visibility: visible;
+    font-size: 1rem;
+
+}
 
 /* Contact us page */
 body[data-recollect-page="-pages-test-contact"] .blockOcode_block {
@@ -406,5 +418,14 @@ body[data-recollect-page="-pages-test-contact"] .blockOcode_block div.submit {
 
     #browser {
         flex-direction: column;
+    }
+
+    #browser a {
+        flex-basis: auto;
+        height: auto;
+    }
+
+    #browser a:before {
+        bottom: -20px !important;
     }
 }
