@@ -24,5 +24,4 @@ $RECYCLE.BIN/
 *.lnk
 
 # Ignore local testing files
-test-styles_files/
-fonts/
+/local-testing/
