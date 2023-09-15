@@ -63,6 +63,12 @@
 .blockOcode ul {
     list-style-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' height='0.9em' viewBox='0 -64 512 512'%3E%3Cpath d='M502.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-128-128c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L402.7 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l370.7 0-73.4 73.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l128-128z'/%3E%3C/svg%3E");
 }
+.blockOcode ul.fa-ul {
+    list-style-image: none;
+}
+.blockOcode ul.fa-ul>li {
+    list-style-type: none;
+}
 
 .blockOcode .hero-text p {
     font-size: 1.125rem;
@@ -359,6 +365,32 @@
     visibility: visible;
 }
 
+.blockOcode .feature-contact {
+    width: 100%;
+    background-color: #d1d1d1;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    margin-top: 3rem;
+}
+
+.blockOcode .feature-contact-info {
+    width: calc(50% - 2rem);
+    padding: 2rem 2rem 1.5rem;
+}
+
+.blockOcode .feature-contact-info h2 {
+    margin-top: 0;
+}
+
+.blockOcode .feature-contact-map {
+    width: 50%;
+}
+
+.blockOcode .feature-contact-map iframe {
+    border: none;
+}
+
 /* Contact us page */
 body[data-recollect-page="-pages-test-contact"] .blockOcode_block {
     width: 90%;
@@ -466,4 +498,15 @@ body[data-recollect-page="-pages-test-contact"] .blockOcode_block div.submit {
         max-width: 50%;
         margin-bottom: -2px;
     }
+
+    .blockOcode .feature-contact {
+        flex-direction: column;
+    }
+    .blockOcode .feature-contact-info, .blockOcode .feature-contact-map {
+        width: auto;
+    }
+    .blockOcode .feature-contact-info {
+        padding: 1.5rem 1.5rem 1rem;
+    }
+    
 }
