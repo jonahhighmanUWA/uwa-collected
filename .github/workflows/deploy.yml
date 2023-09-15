@@ -34,6 +34,8 @@ jobs:
       # Check out the main branch and put it at '/'
       - name: Checkout
         uses: actions/checkout@v3
+        with:
+          ref: main
       # Check out the uat branch and put it at '/uat'
       - name: Checkout
         uses: actions/checkout@v3
