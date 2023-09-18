@@ -1,5 +1,4 @@
-<script type="text/javascript"> <!-- UAT Import local styles -->
-  var localStyleSheet = document.createElement("link");
+var localStyleSheet = document.createElement("link");
   localStyleSheet.setAttribute("rel", "stylesheet");
   localStyleSheet.setAttribute("type", "text/css");
   localStyleSheet.setAttribute(
@@ -7,4 +6,3 @@
     "https://uwalibrary.github.io/uwa-collected/uat/css/local-styles.css"
   );
   document.head.appendChild(localStyleSheet);
-</script>
