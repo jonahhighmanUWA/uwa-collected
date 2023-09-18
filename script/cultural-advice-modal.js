@@ -214,46 +214,46 @@ document.head.appendChild(styleSheet)
 
 // The popup functionality begins here
 $(document).ready(function () {
-    // Function to only allow tabbing focus on popup buttons
-    function trapFocus(e) {
-        const firstFocusableElement = $('.modal_copy').find(':focusable').eq(0); // get first element to be focused inside modal
-        const focusableContent = $('.modal_copy').find(':focusable');
-        const lastFocusableElement = focusableContent[focusableContent.length - 1]; // get last element to be focused inside modal
-        let isTabPressed = e.key === 'Tab' || e.keyCode === 9;
-        if (!isTabPressed) {
-            return;
-        }
-        if (e.shiftKey) { // if shift key pressed for shift + tab combination
-            if (document.activeElement === firstFocusableElement) {
-                lastFocusableElement.focus(); // add focus for the last focusable element
-                e.preventDefault();
-            }
-        } else { // if tab key is pressed
-            if (document.activeElement === lastFocusableElement) { // if focused has reached to last focusable element then focus first focusable element after pressing tab
-                firstFocusableElement.focus(); // add focus for the first focusable element
-                e.preventDefault();
-            }
-        }
-    }
+	// Function to only allow tabbing focus on popup buttons
+	function trapFocus(e) {
+		const firstFocusableElement = $('.modal_copy').find(':focusable').eq(0); // get first element to be focused inside modal
+		const focusableContent = $('.modal_copy').find(':focusable');
+		const lastFocusableElement = focusableContent[focusableContent.length - 1]; // get last element to be focused inside modal
+		let isTabPressed = e.key === 'Tab' || e.keyCode === 9;
+		if (!isTabPressed) {
+			return;
+		}
+		if (e.shiftKey) { // if shift key pressed for shift + tab combination
+			if (document.activeElement === firstFocusableElement) {
+				lastFocusableElement.focus(); // add focus for the last focusable element
+				e.preventDefault();
+			}
+		} else { // if tab key is pressed
+			if (document.activeElement === lastFocusableElement) { // if focused has reached to last focusable element then focus first focusable element after pressing tab
+				firstFocusableElement.focus(); // add focus for the first focusable element
+				e.preventDefault();
+			}
+		}
+	}
 
-    // Function to open the popup and start the tabbing focus trap
-    function openModal() {
-        $('.modal_overlay').fadeIn("def", function () {
-            $('.modal_copy').attr("tabindex", "-1").focus();
-            localStorage.setItem('modal_open', 'true');
-            document.addEventListener('keydown', trapFocus);
-        });
-    }
+	// Function to open the popup and start the tabbing focus trap
+	function openModal() {
+		$('.modal_overlay').fadeIn("def", function () {
+			$('.modal_copy').attr("tabindex", "-1").focus();
+			localStorage.setItem('modal_open', 'true');
+			document.addEventListener('keydown', trapFocus);
+		});
+	}
 
-    // Function to close the popup and stop the tabbing focus trap
-    function closeModal() {
-        document.removeEventListener("keydown", trapFocus);
-        $('.modal_overlay').fadeOut().attr("aria-hidden", "true");
-        localStorage.setItem('modal_open', 'false');
-        $(document).find(':focusable').eq(0).focus();
-    }
+	// Function to close the popup and stop the tabbing focus trap
+	function closeModal() {
+		document.removeEventListener("keydown", trapFocus);
+		$('.modal_overlay').fadeOut().attr("aria-hidden", "true");
+		localStorage.setItem('modal_open', 'false');
+		$(document).find(':focusable').eq(0).focus();
+	}
 
-    // Execution starts here
+	// Execution starts here
 
 	// Injects the HTML of the popup window into the code
 	$('body').append(`
@@ -270,32 +270,32 @@ $(document).ready(function () {
 		</div></div></div>
 		`)
 
-    // Opens the popup after a brief wait when page loads
-    if (!(modal_only_show_once === true && localStorage.getItem('modal_seen') === 'true')) {
-        setTimeout(function () {
-            openModal();
-        }, 0);
-    }
-    // On press of 'Esc' key, closes the popup
-    $(document).on('keydown', function (event) {
-        if (event.key == "Escape") {
-            closeModal();
-        }
-    });
-    // On click of a close button, closes the popup
-    $('.modalClickClose').click(function () {
-        closeModal();
-    });
-    // On click of a 'Don't show again' button, remember on this device not to show next time
-    $('.modalDontShowAgain').click(function () {
-        localStorage.setItem('modal_seen', 'true');
-    });
-    // TESTING Open modal with link on UAT page
-    $('#testingOpenModal').click(function () {
-        openModal();
-    });
-    // TESTING Clear variable for 'Don't show again'
-    $('#testingReset').click(function () {
-        localStorage.removeItem('modal_seen');
-    });
+	// Opens the popup after a brief wait when page loads
+	if (!(modal_only_show_once === true && localStorage.getItem('modal_seen') === 'true')) {
+		setTimeout(function () {
+			openModal();
+		}, 0);
+	}
+	// On press of 'Esc' key, closes the popup
+	$(document).on('keydown', function (event) {
+		if (event.key == "Escape") {
+			closeModal();
+		}
+	});
+	// On click of a close button, closes the popup
+	$('.modalClickClose').click(function () {
+		closeModal();
+	});
+	// On click of a 'Don't show again' button, remember on this device not to show next time
+	$('.modalDontShowAgain').click(function () {
+		localStorage.setItem('modal_seen', 'true');
+	});
+	// TESTING Open modal with link on UAT page
+	$('#testingOpenModal').click(function () {
+		openModal();
+	});
+	// TESTING Clear variable for 'Don't show again'
+	$('#testingReset').click(function () {
+		localStorage.removeItem('modal_seen');
+	});
 });
