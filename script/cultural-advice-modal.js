@@ -6,6 +6,7 @@ var modal_button1_text = "Learn more";
 var modal_button2_text = "Don't show again";
 var modal_button1_link = "/pages/test-staticinfo";
 var modal_button2_link = "#";
+var background_image = "https://uwalibrary.github.io/uwa-collected/img/abstract1.jpg";
 
 // Set to 'true' if the modal should not show again after a user has seen it once
 var modal_only_show_once = true;
@@ -43,7 +44,7 @@ var styles = `
 }
 /* Accent frame */
 .modal_accent {
-	background-image: url(https://collected.uwa.edu.au/htmluploads/uwa/image/shared/abstract.png);
+	background-image: url(${background_image});
 	grid-area: 2/2/5/4;
 	height: auto;
 }
