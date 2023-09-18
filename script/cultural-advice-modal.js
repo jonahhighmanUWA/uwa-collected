@@ -4,7 +4,7 @@ var modal_title2 = "";
 var modal_message = "Aboriginal and Torres Strait Islander people are advised that UWA Collected contains images, voices and names of people who have died.</p><p>Some material may contain words, descriptions and images that are considered offensive and discriminatory by current standards, or reflect outdated ideas, practice and analysis. These do not reflect the views of the University of Western Australia, but are provided in a historical context and reflect the period in which they were written or created.";
 var modal_button1_text = "Learn more";
 var modal_button2_text = "Don't show again";
-var modal_button1_link = "/pages/test-staticinfo";
+var modal_button1_link = "/pages/cultural-safety";
 var modal_button2_link = "#";
 var background_image = "https://uwalibrary.github.io/uwa-collected/img/abstract1.jpg";
 
