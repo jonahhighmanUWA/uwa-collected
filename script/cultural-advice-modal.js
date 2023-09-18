@@ -254,19 +254,20 @@ $(document).ready(function () {
 
     // Execution starts here
 
-    // Injects the HTML of the popup window into the code
-    $('body').append(
-        '<div class="modal_overlay">' +
-        '<div class="modal_content">' +
-        '<div class="modal_accent"></div>' +
-        '<div id="alertdialog" class="modal_copy" role="alertdialog" aria-modal="true" aria-labelledby="modal_title" aria-describedby="modal_message">' +
-        '<h2 id="modal_title"><span class="font-2">' + modal_title1 + '<br></span>' + modal_title2 + '</h2>' +
-        '<p id="modal_message">' + modal_message + '</p>' +
-        '<button class="modal_button_close modalClickClose" aria-label="Close dialog"><i class="fa fa-close"></i></button></div>' +
-        '<div class="modal_button_container">' +
-        '<a href="' + modal_button1_link + '"><button tabindex="-1" class="button1">' + modal_button1_text + '</button></a>' +
-        '<a href="' + modal_button2_link + '"><button class="modalClickClose modalDontShowAgain" tabindex="-1">' + modal_button2_text + '</button></a>' +
-        '</div></div></div>')
+	// Injects the HTML of the popup window into the code
+	$('body').append(`
+		<div class="modal_overlay">
+		<div class="modal_content">
+		<div class="modal_accent"></div>
+		<div id="alertdialog" class="modal_copy" role="alertdialog" aria-modal="true" aria-labelledby="modal_title" aria-describedby="modal_message">
+		<h2 id="modal_title"><span class="font-2">${modal_title1}<br></span>${modal_title2}</h2>
+		<p id="modal_message">${modal_message}</p>
+		<button class="modal_button_close modalClickClose" aria-label="Close dialog"><i class="fa fa-close"></i></button></div>
+		<div class="modal_button_container">
+		<a href="${modal_button1_link}"><button tabindex="-1" class="button1">${modal_button1_text}</button></a>
+		<a href="${modal_button2_link}"><button class="modalClickClose modalDontShowAgain" tabindex="-1">${modal_button2_text}</button></a>
+		</div></div></div>
+		`)
 
     // Opens the popup after a brief wait when page loads
     if (!(modal_only_show_once === true && localStorage.getItem('modal_seen') === 'true')) {
