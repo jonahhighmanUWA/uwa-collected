@@ -491,6 +491,7 @@ body[data-recollect-page="-pages-test-contact"] .blockOcode_block div.submit {
 .blockOcode .static-lower-nav {
     position: relative;
     width: 100%;
+    margin-bottom: 20px;
 }
 
 .blockOcode .static-lower-nav-links {
