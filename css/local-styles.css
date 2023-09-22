@@ -370,7 +370,7 @@
 
 .blockOcode .feature-contact {
     width: 100%;
-    background-color: #d1d1d1;
+    background-color: #f4f4f4;
     height: auto;
     display: flex;
     flex-direction: row;
@@ -433,7 +433,7 @@ body[data-recollect-page="-pages-test-contact"] .blockOcode_block div.submit {
     width: 100%;
 }
 .blockOcode .image-liftout-right {
-    background-color: #f0f0f0;
+    background-color: #f4f4f4;
     position: relative;
     padding: 30px 102px 60px;
 }
@@ -590,8 +590,6 @@ body[data-recollect-page="-pages-test-contact"] .blockOcode_block div.submit {
     }
 
     .blockOcode .image-liftout-right {
-        background-color: #f0f0f0;
-        position: relative;
         padding: 10px 20px 30px;
     }
 
