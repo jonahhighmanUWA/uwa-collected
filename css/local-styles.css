@@ -595,6 +595,10 @@ body[data-recollect-page="-pages-test-contact"] .blockOcode_block div.submit {
         height: auto;
     }
 
+    .blockOcode .uwa-hero .img {
+        height: 200px;
+    }
+
     #browser {
         flex-direction: column;
     }
