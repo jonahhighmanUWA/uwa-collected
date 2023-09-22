@@ -432,6 +432,7 @@ body[data-recollect-page="-pages-test-contact"] .blockOcode_block div.submit {
 .blockOcode .image-liftout-left img {
     width: 100%;
 }
+
 .blockOcode .image-liftout-right {
     background-color: #f4f4f4;
     position: relative;
@@ -440,7 +441,7 @@ body[data-recollect-page="-pages-test-contact"] .blockOcode_block div.submit {
 
 .blockOcode .image-liftout-quote {
     font-size: 1.44rem;
-    font-family: "Merriweather",Georgia,Times,"Times New Roman",serif;
+    font-family: "Merriweather", Georgia, Times, "Times New Roman", serif;
     line-height: 1.4em;
     position: relative;
     border-left: 0;
@@ -449,6 +450,7 @@ body[data-recollect-page="-pages-test-contact"] .blockOcode_block div.submit {
     margin: 2rem 0;
     font-style: inherit;
 }
+
 .blockOcode .image-liftout-quote:before {
     position: absolute;
     left: -4rem;
@@ -456,11 +458,12 @@ body[data-recollect-page="-pages-test-contact"] .blockOcode_block div.submit {
     display: block;
     content: "“";
     top: 14px;
-    transform: scale(0.9,0.7) skewX(-10deg);
+    transform: scale(0.9, 0.7) skewX(-10deg);
 }
+
 .blockOcode .image-liftout-cite {
     display: block;
-    font-family: "Montserrat",Arial,Helvetica,sans-serif;
+    font-family: "Montserrat", Arial, Helvetica, sans-serif;
     font-weight: 500;
     padding: 20px 0 0 0;
     margin-left: 24px;
@@ -472,6 +475,7 @@ body[data-recollect-page="-pages-test-contact"] .blockOcode_block div.submit {
     letter-spacing: 3px;
     font-style: inherit;
 }
+
 .blockOcode .image-liftout-cite:before {
     display: block;
     content: "";
@@ -480,6 +484,53 @@ body[data-recollect-page="-pages-test-contact"] .blockOcode_block div.submit {
     height: 100%;
     left: -22px;
     bottom: 0;
+}
+
+/* Static page lower navigation links */
+
+.blockOcode .static-lower-nav {
+    position: relative;
+    width: 100%;
+}
+
+.blockOcode .static-lower-nav-links {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    gap: 25px;
+}
+
+.blockOcode .static-lower-nav-links a {
+    color: #111111;
+    display: flex;
+    position: relative;
+    padding: 1rem;
+    text-decoration: none;
+    min-height: 150px;
+    flex-flow: column;
+    border: 1px solid #d1d1d1;
+    box-shadow: 0px 4px 0px 0px #d1d1d1;
+    flex: 1 1 20%;
+    transition: background-color 0.1s ease-in-out;
+}
+
+.blockOcode .static-lower-nav-links a:hover {
+    background-color: #f4f4f4;
+}
+
+.blockOcode .static-lower-nav-links a h3 {
+    font-size: 1.44rem;
+    margin: 0 0 1rem;
+}
+
+.blockOcode .static-lower-nav-links a p:after {
+    font: normal normal normal 14px/1 FontAwesome;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-size: 12px;
+    content: '\f054';
+    padding-left: 0.6rem;
 }
 
 @media only screen and (max-width: 1200px) {
@@ -595,13 +646,41 @@ body[data-recollect-page="-pages-test-contact"] .blockOcode_block div.submit {
 
     .blockOcode .image-liftout-quote {
         font-size: 1.125rem;
-        margin-bottom: 1rem;;
+        margin-bottom: 1rem;
+        ;
     }
+
     .blockOcode .image-liftout-quote:before {
         position: relative;
         top: 0;
         left: -1.4rem;
+    }
 
+    /* Static page lower navigation links */
+
+    .blockOcode .static-lower-nav {
+        margin: 0 0 1rem;
+    }
+
+    .blockOcode .static-lower-nav-links {
+        flex-direction: column;
+    }
+
+    .blockOcode .static-lower-nav-links a {
+        min-height: unset;
+    }
+
+    .blockOcode .static-lower-nav-links a p {
+        display: none;
+    }
+
+    .blockOcode .static-lower-nav-links a h3:after {
+        font: normal normal normal 14px/1 FontAwesome;
+        text-rendering: auto;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        content: '\f054';
+        padding-left: 0.6rem;
     }
 
 }
