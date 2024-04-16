@@ -20,7 +20,6 @@ var styles = `
 	top: 0;
 	height: 100vh;
 	height: 100%; /* Fallback */
-	height: -moz-available;
 	height: -webkit-fill-available;
 	height: fill-available;
 	height: stretch; /* Latest specification */
